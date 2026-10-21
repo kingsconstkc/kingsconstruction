@@ -50,7 +50,7 @@ const social: Social = [
   {
     name: "Email",
     icon: "email",
-    link: `mailto:${email}`,
+    link: "mailto:" '${email}`,
     essential: true,
   },
 ];
@@ -79,7 +79,7 @@ const home: Home = {
     <>
       I'm {person.firstName}, a {person.role.toLowerCase()} at{" "}
       <Text as="span" size="xl" weight="strong">
-        ONCE UI
+        Kings Construction
       </Text>
       , where we build <br /> and deliver. No matter how big or small. Residential, commercial, upgrades or full rehab..
     </>
