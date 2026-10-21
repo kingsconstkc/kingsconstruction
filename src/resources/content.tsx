@@ -2,303 +2,211 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Kings",
-  lastName: "Construction",
-  name: `Kings Construction,
-  role: "Residential and Commercial Contractor",
-  avatar: "/images/avatar.jpg",
-  email: "kings.constructionkc@proton.me",
-  location: "Kansas City, Missouri", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English"], // optional: Leave the array empty if you don't want to display languages
-  locale: "en", // BCP 47 language tag for the HTML lang attribute, e.g., 'en', 'ja', 'zh-TW'
+    firstName: "Oscar",
+    lastName: "Gardea",
+    name: `Kings Construction`,
+    role: "Residential & Commercial Contractor",
+    avatar: "/images/avatar.jpg",
+    email: "oscar@kingsconstructionkc.com",
+    location: "America/Chicago", // Kansas City, MO — IANA time zone identifier
+    locationLabel: "Kansas City, MO",
+    languages: ["English"], // optional: Leave the array empty if you don't want to display languages
+    locale: "en", // BCP 47 language tag for the HTML lang attribute, e.g., 'en', 'ja', 'zh-TW'
 };
 
 const newsletter: Newsletter = {
-  display: true,
-  title: <>Subscribe to {person.firstName.lastName}'s Newsletter</>,
-  description: <>Weekly Newsletter Featuring New and Upcoming Projects</>,
+    display: true,
+    title: <>The Kings Construction Newsletter</>,
+    description: (
+        <>Project reveals, before-and-afters, and new work coming to the Kansas City area</>
+    ),
 };
 
 const social: Social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
-  // Set essentials: true for links you want to show on the about page
-  {
-    name: "GitHub",
-    icon: "github",
-    link: "https://github.com/once-ui-system",
-    essential: false,
-  },
-  {
-    name: "LinkedIn",
-    icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-    essential: true,
-  },
-  {
-    name: "Instagram",
-    icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
-    essential: true,
-  },
-  {
-    name: "Email",
-    icon: "email",
-    link: "mailto:" '${email}`,
-    essential: true,
-  },
+    // Links are automatically displayed.
+    // Import new icons in /once-ui/icons.ts
+    // Set essentials: true for links you want to show on the about page
+    // Add Instagram / Facebook / Google Business profiles here once they exist:
+    // { name: "Instagram", icon: "instagram", link: "https://www.instagram.com/<handle>", essential: true },
+    {
+        name: "Email",
+        icon: "email",
+        link: `mailto:${person.email}`,
+        essential: true,
+    },
+    {
+        name: "Website",
+        icon: "globe",
+        link: "https://kingsconstructionkc.com",
+        essential: true,
+    },
+    {
+        name: "Facebook",
+        icon: "facebook",
+        link: "https://www.facebook.com/kingsconstructionkc",
+        essential: true,
+    },
 ];
 
 const home: Home = {
-  path: "/",
-  image: "/images/og/home.jpg",
-  label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Built on trust. Craftmanship you can count on!</>,
-  featured: {
-    display: true,
-    title: (
-      <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
-        <Line background="brand-alpha-strong" vert height="20" />
-        <Text marginRight="4" onBackground="brand-medium">
-          Featured work
-        </Text>
-      </Row>
+    path: "/",
+    image: "/images/og/home.jpg",
+    label: "Home",
+    title: `Kings Construction | Kansas City Remodeling & Contracting`,
+    description: `Remodel, reimagine, really love it. Kings Construction delivers whole-home
+      remodels, kitchens & bathrooms, basements & additions, and custom design across the
+      Kansas City area.`,
+    headline: <>Remodel. Reimagine. Really love it.</>,
+    featured: {
+        display: true,
+        title: (
+            <Row gap="12" vertical="center">
+                <strong className="ml-4">Kings Construction</strong>{" "}
+                <Line background="brand-alpha-strong" vert height="20" />
+                <Text marginRight="4" onBackground="brand-medium">
+                    Featured project
+                </Text>
+            </Row>
+        ),
+        href: "/work/whole-home-kitchen-remodel",
+    },
+    subline: (
+        <>
+            We're a{" "}
+            <Text as="span" size="xl" weight="strong">
+                Kansas City crew
+            </Text>{" "}
+            that builds and delivers — whole-home remodels, kitchens & baths, basements &
+            additions. <br />
+            Local. Reliable. Remarkable. Call{" "}
+            <Text as="span" weight="strong">
+                (913) 636-5261
+            </Text>{" "}
+            for a free consultation.
+        </>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
-  },
-  subline: (
-    <>
-      I'm {person.firstName}, a {person.role.toLowerCase()} at{" "}
-      <Text as="span" size="xl" weight="strong">
-        Kings Construction
-      </Text>
-      , where we build <br /> and deliver. No matter how big or small. Residential, commercial, upgrades or full rehab..
-    </>
-  ),
 };
 
 const about: About = {
-  path: "/about",
-  label: "About",
-  title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
-  tableOfContent: {
-    display: true,
-    subItems: false,
-  },
-  avatar: {
-    display: true,
-  },
-  calendar: {
-    display: true,
-    link: "https://cal.com",
-  },
-  intro: {
-    display: true,
-    title: "Introduction",
-    description: (
-      <>
-        {person.firstName} is a {person.location.split("/")[1]?.replace("_", " ")}-based{" "}
-        {person.role.toLowerCase()} fast working, fully motivated crew operating with integrity in everything we do.
-      </>
-    ),
-  },
-  work: {
-    display: false, // set to false to hide this section
-    title: "Work Experience",
-    experiences: [
-      {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
-        achievements: [
-          <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
-        ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
-        achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
-        ],
-        images: [],
-      },
-    ],
-  },
-  studies: {
-    display: false, // set to false to hide this section
-    title: "Studies",
-    institutions: [
-      {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
-      },
-    ],
-  },
-  technical: {
-    display: false, // set to false to hide this section
-    title: "Technical skills",
-    skills: [
-      {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-        tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-        tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-    ],
-  },
+    path: "/about",
+    label: "About",
+    title: `About – ${person.name}`,
+    description: `Kings Construction is a residential and commercial remodeling contractor
+      proudly serving Kansas City, MO and the surrounding metro.`,
+    tableOfContent: {
+        display: true,
+        subItems: false,
+    },
+    avatar: {
+        display: true,
+    },
+    calendar: {
+        display: false, // set display to true and add a real booking link when ready
+        link: "",
+    },
+    intro: {
+        display: true,
+        title: "Introduction",
+        description: (
+            <>
+              Kings Construction is a Kansas City–based {person.role.toLowerCase()} built on
+              trust and modern design. Owner and operator {person.firstName}{" "}
+              {person.lastName} leads every project personally — whole-home remodels, kitchens
+              & bathrooms, basements & additions, and custom design. Your vision, our
+              expertise: we show up on time, on budget, and deliver work we're proud to put
+              our name on.
+            </>
+        ),
+    },
+    work: {
+        display: false, // set to false to hide this section
+        title: "Work Experience",
+        experiences: [],
+    },
+    studies: {
+        display: false, // set to false to hide this section
+        title: "Studies",
+        institutions: [],
+    },
+    technical: {
+        display: false, // set to false to hide this section
+        title: "Services",
+        skills: [],
+    },
 };
 
 const blog: Blog = {
-  path: "/blog",
-  label: "Blog",
-  title: "Writing about design and detail...",
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
+    path: "/blog",
+    label: "Blog",
+    title: "Notes from the jobsite...",
+    description: `Project updates, reveals, and remodeling insights from ${person.name}`,
+    // Create new blog posts by adding a new .mdx file to app/blog/posts
+    // All posts will be listed on the /blog route
 };
 
 const work: Work = {
-  path: "/work",
-  label: "Work",
-  title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
+    path: "/work",
+    label: "Projects",
+    title: `Recent Work – ${person.name}`,
+    description: `Residential and commercial remodeling projects delivered by ${person.name} in the Kansas City area`,
+    // Create new project pages by adding a new .mdx file to app/work/projects
+    // All projects will be listed on the /home and /work routes
 };
 
 const gallery: Gallery = {
-  path: "/gallery",
-  label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
-  images: [
-    {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-  ],
+    path: "/gallery",
+    label: "Gallery",
+    title: `Project Gallery – ${person.name}`,
+    description: `A collection of finished work by ${person.name}`,
+    // Replace these with your own project photos as they become available.
+    // Keep the orientation flag matching the photo (horizontal / vertical).
+    images: [
+        {
+            src: "/images/gallery/horizontal-1.jpg",
+            alt: "Custom black feature wall with gold diagonal inlay and crystal chandelier — finished by Kings Construction",
+            orientation: "vertical",
+        },
+        {
+            src: "/images/gallery/vertical-4.jpg",
+            alt: "Premium bathroom remodel with gold fixtures and marble-look tile by Kings Construction",
+            orientation: "vertical",
+        },
+        {
+            src: "/images/gallery/horizontal-3.jpg",
+            alt: "Kitchen remodel before-and-after: oak cabinets to a bright white kitchen with island",
+            orientation: "horizontal",
+        },
+        {
+            src: "/images/gallery/vertical-1.jpg",
+            alt: "Kings Construction — residential & commercial remodeling in Kansas City",
+            orientation: "vertical",
+        },
+        {
+            src: "/images/gallery/vertical-2.jpg",
+            alt: "Beautiful bathrooms built to last — marble shower installs by Kings Construction",
+            orientation: "vertical",
+        },
+        {
+            src: "/images/gallery/horizontal-2.jpg",
+            alt: "Navy kitchen with brass fixtures, brick accent wall, and quartz counters",
+            orientation: "horizontal",
+        },
+        {
+            src: "/images/gallery/img-01.jpg",
+            alt: "Kings Construction KC quality badge on a blueprint",
+            orientation: "horizontal",
+        },
+        {
+            src: "/images/gallery/horizontal-4.jpg",
+            alt: "Finished home office with gold-framed accent chairs and Kansas City views",
+            orientation: "horizontal",
+        },
+        {
+            src: "/images/gallery/vertical-3.jpg",
+            alt: "Remodel. Reimagine. Really love it. — premium remodeling for Kansas City",
+            orientation: "horizontal",
+        },
+    ],
 };
 
 export { person, social, newsletter, home, about, blog, work, gallery };

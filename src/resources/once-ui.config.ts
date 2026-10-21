@@ -14,7 +14,7 @@ import {
 import { home, person, social } from "./content";
 
 // IMPORTANT: Replace with your own domain address - it's used for SEO in meta tags and schema
-const baseURL: string = "https://magic-portfolio-demo.vercel.app";
+const baseURL: string = "https://kingsconstructionkc.com";
 
 const routes: RoutesConfig = {
   "/": true,
@@ -32,9 +32,8 @@ const display: DisplayConfig = {
 
 // Enable password protection on selected routes
 // Set password in the .env file, refer to .env.example
-const protectedRoutes: ProtectedRoutesConfig = {
-  "/work/automate-design-handovers-with-a-figma-to-code-pipeline": true,
-};
+// Example: "/gallery": true
+const protectedRoutes: ProtectedRoutesConfig = {};
 
 // Import and set font for each variant
 import { Geist } from "next/font/google";
@@ -72,7 +71,7 @@ const fonts: FontsConfig = {
 };
 
 // default customization applied to the HTML in the main layout.tsx
-const style = {
+const style: StyleConfig = {
   theme: "dark",
   brand: "custom",
   accent: "custom",
@@ -82,7 +81,8 @@ const style = {
   solidStyle: "plastic",
   surface: "translucent",
   transition: "all",
-}
+  scaling: "100", // "90" | "95" | "100" | "105" | "110"
+};
 
 const dataStyle: DataStyleConfig = {
   variant: "gradient", // flat | gradient | outline
@@ -188,8 +188,8 @@ const newsletterForm: NewsletterFormConfig = {
 
 // default schema data — pulls from content.tsx so there's one source of truth
 const schema: SchemaConfig = {
-  logo: "",
-  type: "Person",
+  logo: "/images/og/logo.jpg",
+  type: "LocalBusiness",
   name: person.name,
   description: home.description,
   email: person.email,

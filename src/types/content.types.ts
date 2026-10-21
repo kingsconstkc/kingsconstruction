@@ -25,6 +25,8 @@ export type Person = {
   email: string;
   /** IANA time zone location */
   location: IANATimeZone;
+  /** Optional display name for the location, e.g., 'Kansas City, MO'. Falls back to the time zone city. */
+  locationLabel?: string;
   /** Languages spoken */
   languages?: string[];
   /**
