@@ -106,10 +106,10 @@ const effects: EffectsConfig = {
     radius: 100,
   },
   gradient: {
-    display: false,
-    opacity: 100,
+    display: true,
+    opacity: 90,
     x: 50,
-    y: 60,
+    y: 0,
     width: 100,
     height: 50,
     tilt: 0,
@@ -120,7 +120,7 @@ const effects: EffectsConfig = {
     display: true,
     opacity: 40,
     size: "2",
-    color: "brand-background-strong",
+    color: "accent-background-weak",
   },
   grid: {
     display: false,

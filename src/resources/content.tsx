@@ -56,14 +56,22 @@ const home: Home = {
     description: `Remodel, reimagine, really love it. Kings Construction delivers whole-home
       remodels, kitchens & bathrooms, basements & additions, and custom design across the
       Kansas City area.`,
-    headline: <>Remodel. Reimagine. Really love it.</>,
+    headline: (
+        <>
+            Remodel.{" "}
+            <Text as="span" onBackground="accent-strong">
+                Reimagine.
+            </Text>{" "}
+            Really love it.
+        </>
+    ),
     featured: {
         display: true,
         title: (
             <Row gap="12" vertical="center">
                 <strong className="ml-4">Kings Construction</strong>{" "}
-                <Line background="brand-alpha-strong" vert height="20" />
-                <Text marginRight="4" onBackground="brand-medium">
+                <Line background="accent-alpha-strong" vert height="20" />
+                <Text marginRight="4" onBackground="accent-medium">
                     Featured project
                 </Text>
             </Row>
@@ -79,7 +87,7 @@ const home: Home = {
             that builds and delivers — whole-home remodels, kitchens & baths, basements &
             additions. <br />
             Local. Reliable. Remarkable. Call{" "}
-            <Text as="span" weight="strong">
+            <Text as="span" weight="strong" onBackground="accent-strong">
                 (913) 636-5261
             </Text>{" "}
             for a free consultation.
