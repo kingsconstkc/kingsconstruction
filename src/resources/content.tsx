@@ -2,21 +2,21 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Kings",
+  lastName: "Construction",
+  name: `Kings Construction,
+  role: "Residential and Commercial Contractor",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "kings.constructionkc@proton.me",
+  location: "Kansas City, Missouri", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English"], // optional: Leave the array empty if you don't want to display languages
   locale: "en", // BCP 47 language tag for the HTML lang attribute, e.g., 'en', 'ja', 'zh-TW'
 };
 
 const newsletter: Newsletter = {
   display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  title: <>Subscribe to {person.firstName.lastName}'s Newsletter</>,
+  description: <>Weekly Newsletter Featuring New and Upcoming Projects</>,
 };
 
 const social: Social = [
@@ -27,7 +27,7 @@ const social: Social = [
     name: "GitHub",
     icon: "github",
     link: "https://github.com/once-ui-system",
-    essential: true,
+    essential: false,
   },
   {
     name: "LinkedIn",
@@ -50,7 +50,7 @@ const social: Social = [
   {
     name: "Email",
     icon: "email",
-    link: `mailto:${person.email}`,
+    link: `mailto:${email}`,
     essential: true,
   },
 ];
@@ -61,7 +61,7 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Built on trust. Craftmanship you can count on!</>,
   featured: {
     display: true,
     title: (
@@ -81,7 +81,7 @@ const home: Home = {
       <Text as="span" size="xl" weight="strong">
         ONCE UI
       </Text>
-      , where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+      , where we build <br /> and deliver. No matter how big or small. Residential, commercial, upgrades or full rehab..
     </>
   ),
 };
@@ -108,14 +108,12 @@ const about: About = {
     description: (
       <>
         {person.firstName} is a {person.location.split("/")[1]?.replace("_", " ")}-based{" "}
-        {person.role.toLowerCase()} with a passion for transforming complex challenges into simple,
-        elegant design solutions. Their work spans digital interfaces, interactive experiences, and
-        the convergence of design and technology.
+        {person.role.toLowerCase()} fast working, fully motivated crew operating with integrity in everything we do.
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
+    display: false, // set to false to hide this section
     title: "Work Experience",
     experiences: [
       {
@@ -161,7 +159,7 @@ const about: About = {
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
+    display: false, // set to false to hide this section
     title: "Studies",
     institutions: [
       {
@@ -175,7 +173,7 @@ const about: About = {
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
+    display: false, // set to false to hide this section
     title: "Technical skills",
     skills: [
       {
@@ -237,7 +235,7 @@ const about: About = {
 const blog: Blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
+  title: "Writing about design and detail...",
   description: `Read what ${person.name} has been up to recently`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
