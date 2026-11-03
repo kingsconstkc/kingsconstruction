@@ -1,12 +1,5 @@
-# Magic Portfolio
-
-Magic Portfolio is a simple, clean, beginner-friendly portfolio template. It supports an MDX-based content system for projects and blog posts, an about / CV page and a gallery.
-
-View the demo [here](https://magic-portfolio-demo.vercel.app).
-
 ![Magic Portfolio](public/images/og/home.jpg)
 
-Launch your portfolio on [Aveiro](https://www.aveiro.app/marketplace/spotlight), our managed publishing platform. Update case studies, blog posts and content through MCP from your favorite AI tools.
 
 ## Getting started
 
