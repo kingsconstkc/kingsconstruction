@@ -104,7 +104,7 @@ export default async function RootLayout({
                     }
                   });
                 } catch (e) {
-                  console.error('Failed to initialize theme:', e);
+                  // Suppress theme-init errors to avoid console noise
                   document.documentElement.setAttribute('data-theme', 'dark');
                 }
               })();
