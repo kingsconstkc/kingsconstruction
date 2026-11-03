@@ -6,7 +6,7 @@ const person: Person = {
     lastName: "Gardea",
     name: `Kings Construction`,
     role: "Residential & Commercial Contractor",
-    avatar: "/images/avatar.jpg",
+    avatar: "/images/avatar.webp",
     email: "oscar@kingsconstructionkc.com",
     location: "America/Chicago", // Kansas City, MO — IANA time zone identifier
     locationLabel: "Kansas City, MO",
@@ -50,7 +50,7 @@ const social: Social = [
 
 const home: Home = {
     path: "/",
-    image: "/images/og/home.jpg",
+    image: "/images/og/home.webp",
     label: "Home",
     title: `Kings Construction | Kansas City Remodeling & Contracting`,
     description: `Remodel, reimagine, really love it. Kings Construction delivers whole-home
@@ -170,47 +170,47 @@ const gallery: Gallery = {
     // Keep the orientation flag matching the photo (horizontal / vertical).
     images: [
         {
-            src: "/images/gallery/horizontal-1.jpg",
+            src: "/images/gallery/horizontal-1.webp",
             alt: "Custom black feature wall with gold diagonal inlay and crystal chandelier — finished by Kings Construction",
             orientation: "vertical",
         },
         {
-            src: "/images/gallery/vertical-4.jpg",
+            src: "/images/gallery/vertical-4.webp",
             alt: "Premium bathroom remodel with gold fixtures and marble-look tile by Kings Construction",
             orientation: "vertical",
         },
         {
-            src: "/images/gallery/horizontal-3.jpg",
+            src: "/images/gallery/horizontal-3.webp",
             alt: "Kitchen remodel before-and-after: oak cabinets to a bright white kitchen with island",
             orientation: "horizontal",
         },
         {
-            src: "/images/gallery/vertical-1.jpg",
+            src: "/images/gallery/vertical-1.webp",
             alt: "Kings Construction — residential & commercial remodeling in Kansas City",
             orientation: "vertical",
         },
         {
-            src: "/images/gallery/vertical-2.jpg",
+            src: "/images/gallery/vertical-2.webp",
             alt: "Beautiful bathrooms built to last — marble shower installs by Kings Construction",
             orientation: "vertical",
         },
         {
-            src: "/images/gallery/horizontal-2.jpg",
+            src: "/images/gallery/horizontal-2.webp",
             alt: "Navy kitchen with brass fixtures, brick accent wall, and quartz counters",
             orientation: "horizontal",
         },
         {
-            src: "/images/gallery/img-01.jpg",
+            src: "/images/gallery/img-01.webp",
             alt: "Kings Construction KC quality badge on a blueprint",
             orientation: "horizontal",
         },
         {
-            src: "/images/gallery/horizontal-4.jpg",
+            src: "/images/gallery/horizontal-4.webp",
             alt: "Finished home office with gold-framed accent chairs and Kansas City views",
             orientation: "horizontal",
         },
         {
-            src: "/images/gallery/vertical-3.jpg",
+            src: "/images/gallery/vertical-3.webp",
             alt: "Remodel. Reimagine. Really love it. — premium remodeling for Kansas City",
             orientation: "horizontal",
         },

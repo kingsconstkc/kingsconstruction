@@ -188,7 +188,7 @@ const newsletterForm: NewsletterFormConfig = {
 
 // default schema data — pulls from content.tsx so there's one source of truth
 const schema: SchemaConfig = {
-  logo: "/images/og/logo.jpg",
+  logo: "/images/og/logo.webp",
   type: "LocalBusiness",
   name: person.name,
   description: home.description,
