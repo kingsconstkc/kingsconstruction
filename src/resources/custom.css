@@ -74,18 +74,4 @@ html[data-theme=light] {
   --accent-on-background-strong: var(--function-accent-500);
 }
 
-/* Suppress non-composited animations for Lighthouse (force composited or disable) */
-*, *::before, *::after {
-  animation-timing-function: ease-out !important;
-  animation-duration: 0.001s !important;
-}
 
-/* Force composited transitions only (transform / opacity) */
-:root {
-  --transition-micro-short: 0.05s ease-out;
-  --transition-micro-medium: 0.05s ease-out;
-  --transition-micro-long: 0.05s ease-out;
-  --transition-macro-short: 0.05s ease-out;
-  --transition-macro-medium: 0.05s ease-out;
-  --transition-macro-long: 0.05s ease-out;
-}
